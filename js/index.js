@@ -55,7 +55,7 @@ console.log(
 
 // 1) Запросить число у пользователя, возвести его в квадрат и вывести результат.
 
-const numberAge = prompt("enter your age");
+const numberAge = Number(prompt("enter your age"));
 alert(numberAge ** 2);
 
 // 2) Вывести среднее арифметическое двух чисел. Числа запрашивать у пользователя.
@@ -111,9 +111,9 @@ if (isTest) {
 // 3) Вычислить сумму покупки с учетом скидки. Скидка 3% предоставляется, если сумма покупки больше 500 грн., а скидка 5% - если сумма покупки больше 800 грн. Сумму покупки вводит юзер.
 
 const moneySpent = Number(prompt("giv me your maney"));
-if ((moneySpent >= 500, moneySpent <= 799)) {
+if (moneySpent > 500 && moneySpent <= 800) {
   alert(moneySpent - (moneySpent / 100) * 3);
-} else if (moneySpent >= 800) {
+} else if (moneySpent > 800) {
   alert(moneySpent - (moneySpent / 100) * 5);
 }
 
@@ -131,7 +131,7 @@ if ((moneySpent >= 500, moneySpent <= 799)) {
 //   i--;
 // }
 
-// for (let i = 24; i != 0; i--) {
+// for (let i = 25; i != 0; i--) {
 //   console.log(i);
 // }
 
@@ -165,8 +165,8 @@ if ((moneySpent >= 500, moneySpent <= 799)) {
 
 // for (let i = 1; i <= 100; ++i) {
 //   sum = sum + i;
-//   console.log(sum);
 // }
+//   console.log(sum);
 
 // Таски на switch..case.
 
@@ -203,47 +203,70 @@ if ((moneySpent >= 500, moneySpent <= 799)) {
 
 // 2) В переменной day лежит какое-то число из интервала от 1 до 31. Определите, в какую декаду месяца попадает это число (в первую, вторую или третью).
 
-const day = Number(prompt("enter day"));
+// const day = Number(prompt("enter day"));
 
-switch (day) {
-  case 1:
-  case 2:
-  case 3:
-  case 4:
-  case 5:
-  case 6:
-  case 7:
-  case 8:
-  case 9:
-  case 10:
-    console.log("First Decade");
-    break;
-  case 11:
-  case 12:
-  case 13:
-  case 14:
-  case 15:
-  case 16:
-  case 17:
-  case 18:
-  case 19:
-  case 20:
-    console.log("Second Decade");
-    break;
-  case 21:
-  case 22:
-  case 23:
-  case 24:
-  case 25:
-  case 26:
-  case 27:
-  case 28:
-  case 29:
-  case 30:
-  case 31:
-    console.log("Third Decade");
-    break;
+// switch (day) {
+//   case 1:
+//   case 2:
+//   case 3:
+//   case 4:
+//   case 5:
+//   case 6:
+//   case 7:
+//   case 8:
+//   case 9:
+//   case 10:
+//     console.log("First Decade");
+//     break;
+//   case 11:
+//   case 12:
+//   case 13:
+//   case 14:
+//   case 15:
+//   case 16:
+//   case 17:
+//   case 18:
+//   case 19:
+//   case 20:
+//     console.log("Second Decade");
+//     break;
+//   case 21:
+//   case 22:
+//   case 23:
+//   case 24:
+//   case 25:
+//   case 26:
+//   case 27:
+//   case 28:
+//   case 29:
+//   case 30:
+//   case 31:
+//     console.log("Third Decade");
+//     break;
 
-  default:
-    console.log("incorrect days number");
+//   default:
+//     console.log("incorrect days number");
+// }
+
+// const user2 = {
+//   firstName: "test",
+//   lastName: "testovich",
+//   email: "test@gmail.com",
+//   password: "qwerty",
+//   weight: 70,
+//   height: 1.75,
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+//   getBMI() {
+//     return this.weight / this.height ** 2;
+//   },
+// };
+
+function Cat(fName, lName, age) {
+  this.fName = fName;
+  this.lName = lName;
+  this.age = age;
 }
+
+const cat2 = new Cat("bars", "catovich", 12);
