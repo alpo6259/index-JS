@@ -94,8 +94,14 @@
 //
 // ******************************************************
 
-// const lateralSurfaceAreaCone = function (r, l) {
-//   return 3.14 * r * l;
-// };
+/**
+ *The formula for calculating the area of ​​​​the lateral surface of a cone
+ * @param {number} r - base circle radius
+ * @param {number} l - cone generatrix length
+ * @returns
+ */
+const lateralSurfaceAreaCone = function (r, l) {
+  return 3.14 * r * l;
+};
 
-// console.log(lateralSurfaceAreaCone(5, 6));
+console.log(lateralSurfaceAreaCone(5, 6));
